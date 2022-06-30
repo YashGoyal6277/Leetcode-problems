@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int minMoves2(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int c=0;
+        int low=0,high=nums.size()-1;
+         while(low<high)
+         {
+             c+=nums[high]-nums[low];
+             low++;
+             high--;
+         }
+        return c;
+    }
+};
